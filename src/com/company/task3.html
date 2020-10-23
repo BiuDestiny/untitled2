@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fyn_task3</title>
+    <style>
+        @media screen and (min-width: 500px) {
+            #container {
+                width: 100%;
+                height: 200px;
+                display: flex;
+                background-color: #172139;
+                padding: 10px;
+            }
+
+            #container #left {
+                display: flex;
+                background-color: #172139;
+                flex: 1;
+                flex-flow: column;
+            }
+
+            #container #left #left_up {
+                display: flex;
+                background-color: #323d52;
+                padding: 10px;
+                padding-left: 20px;
+                flex: 2;
+            }
+
+            #container #left #left_up #left_up_1 {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                font-weight: bold;
+                color: deepskyblue;
+                font-size: 1.8em;
+            }
+
+            #container #left #left_up #left_up_2 {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                color: aliceblue;
+                font-size: 0.8em;
+            }
+
+            #container #left #left_up #left_up_3 {
+                flex: 2;
+                display: flex;
+                align-items: center;
+                color: aliceblue;
+                font-size: 0.8em;
+            }
+
+            #container #left #left_down {
+                display: flex;
+                background-color: #323d52;
+                margin-top: 10px;
+                padding: 10px;
+                padding-left: 20px;
+                flex: 3;
+            }
+
+            #container #left #left_down #left_down_1 {
+                flex: 1;
+                display: flex;
+                align-items: center;
+            }
+
+            #container #left #left_down #left_down_2 {
+                flex: 1;
+                display: flex;
+                align-items: center;
+            }
+
+            #container #left #left_down #left_down_3 {
+                flex: 1;
+                display: flex;
+                align-items: center;
+            }
+
+            #container #left #left_down #left_down_4 {
+                flex: 1;
+                display: flex;
+                align-items: center;
+            }
+
+            #container #right {
+                display: flex;
+                background-color: #323d52;
+                flex: 1;
+                margin-left: 10px;
+                margin-right: 10px;
+                padding-top: 40px;
+                padding-bottom: 30px;
+                align-items: center;
+                flex-flow: column;
+            }
+
+            #container #right #right_1 {
+                border-color: #00ffae;
+                border-right-width: 1px;
+            }
+
+            .td_normol {
+                border-right: 1px solid #00b7ff;
+                height: 100px;
+                width: 25%;
+                vertical-align: top;
+                padding-left: 15px;
+            }
+
+            .td_redText {
+                width: 25%;
+                vertical-align: top;
+                padding-left: 15px;
+            }
+
+            .right {
+                color: #00b7ff;
+            }
+
+            .right_number {
+                color: #ffffff;
+                font-size: 3em;
+                font-weight: bolder;
+                margin-top: 6px;
+                white-space: nowrap;
+            }
+
+            .right_left_down {
+                padding-left: 5px;
+                position: relative;
+                left: 5px;
+                top: -5px;
+            }
+
+            .right_left_down_white {
+                color: white;
+                font-size: small;
+                padding-bottom: 10px;
+            }
+
+            .right_left_down_number {
+                color: #00b7ff;
+                font-size: small;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="left">
+        <div id="left_up">
+            <div id="left_up_1">机加工</div>
+            <div id="left_up_2">负责人：测试-组长</div>
+            <div id="left_up_3">更新日期：2020-10-21 21:39:32</div>
+        </div>
+        <div id="left_down">
+            <div id="left_down_1">
+                <img src="ic_calc.png" style="background-color: #00ffae">
+                <div class="right_left_down">
+                    <div class="right_left_down_white">2台</div>
+                    <div class="right_left_down_number">机台数</div>
+                </div>
+            </div>
+            <div id="left_down_2">
+                <img src="ic_calc.png" style="background-color: aqua">
+                <div class="right_left_down">
+                    <div class="right_left_down_white">0台</div>
+                    <div class="right_left_down_number">运行数</div>
+                </div>
+            </div>
+            <div id="left_down_3">
+                <img src="ic_calc.png" style="background-color: #bec4c4">
+                <div class="right_left_down">
+                    <div class="right_left_down_white">2台</div>
+                    <div class="right_left_down_number">停机数</div>
+                </div>
+            </div>
+            <div id="left_down_4">
+                <img src="ic_calc.png" style="background-color: #ff8400">
+                <div class="right_left_down">
+                    <div class="right_left_down_white">0台</div>
+                    <div class="right_left_down_number">维修数</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="right">
+        <div style="width: 100%;flex: 10">
+            <table width="100%">
+                <tr>
+                    <td class="td_normol">
+                        <div class="right">待领工单数<br>
+                            <div class="right_number">0</div>
+                        </div>
+                    </td>
+                    <td class="td_normol">
+                        <div class="right">在制工单数<br>
+                            <div class="right_number">3</div>
+                        </div>
+                    </td>
+                    <td class="td_normol">
+                        <div class="right">延期工序数<br>
+                            <div class="right_number">1</div>
+                        </div>
+                    </td>
+                    <td class="td_normol" style="border-right: none">
+                        <div class="right">产能负荷 <img src="help-filling%20(1).png" style="height: 15px"><br>
+                            <div class="right_number">487.80<span style="font-size: 15px">元</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="td_redText">
+                        <div style="color: #e23636">近七天周产能：449.93</div>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
